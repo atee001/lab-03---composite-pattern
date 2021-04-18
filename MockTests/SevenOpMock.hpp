@@ -1,7 +1,8 @@
 #pragma once
 #include "../base.hpp"
 
-Class SevenOpMock: public Base {
+class SevenOpMock: public Base {
+
     public:
         SevenOpMock() { }
 
