@@ -1,3 +1,4 @@
+#include "Base.hpp"
 #pragma once
 
 class NegativeOpMock: public Base {
