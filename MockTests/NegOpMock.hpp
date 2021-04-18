@@ -1,4 +1,5 @@
-#include "Base.hpp"
+
+#include "../base.hpp"
 #pragma once
 
 class NegativeOpMock: public Base {
@@ -6,6 +7,6 @@ class NegativeOpMock: public Base {
         NegativeOpMock() { }
 
         virtual double evaluate() { return -10.0; }
-        virtual string stringify() { return "-10.0"; }
-}
 
+        virtual string stringify() { return "-10"; }
+};
