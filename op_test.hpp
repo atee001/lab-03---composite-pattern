@@ -14,4 +14,11 @@ TEST(OpTest, OpEvaluateNonZero) {
 //	Op* test = new Op(9);
 //	EXPECT_EQ(test->stringify(), "9");
 //}
+//
+
+//TEST(Add, CorrectVal){
+//
+//	Add* add = new add(2,4);
+//	EXPECT_EQ(add->evaluate(), 
+//}
 #endif //__OP_TEST_HPP__
