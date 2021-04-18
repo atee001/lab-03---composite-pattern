@@ -6,6 +6,6 @@ class NegativeOpMock: public Base {
         NegativeOpMock() { }
 
         virtual double evaluate() { return -10.0; }
-        virtual string stringify() { return "-10.0"; }
-}
+        virtual string stringify() { return "-10"; }
+};
 
