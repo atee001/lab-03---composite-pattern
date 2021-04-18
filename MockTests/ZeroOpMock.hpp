@@ -1,5 +1,6 @@
-#include "Base.hpp"
+#include "../base.hpp"
 #pragma once
+#include <string>
 
 class ZeroOpMock: public Base {
         public:
@@ -8,5 +9,7 @@ class ZeroOpMock: public Base {
 
                 virtual double evaluate() { return 0.0; }
                 virtual string stringify() { return "0.0"; }
-}
+
+};
+
 
