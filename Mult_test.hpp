@@ -6,6 +6,7 @@
 #include "MockTests/NegOpMock.hpp"
 #include "Mult.hpp"
 #include "op.hpp"
+#include "Div.hpp"
 #define M_PI 3.14159265358979323846
 
 
@@ -50,8 +51,12 @@ TEST(MultTests,MultNegString){
         EXPECT_EQ(test->stringify(),"("+left->stringify()+"*"+right->stringify()+")");
 	
 }
-//TEST(OpTest, OpStringify){
-////	Op* test = new Op(9);
-////	EXPECT_EQ(test->stringify(), "9");
-////}
-//#endif //__OP_TEST_HPP__
+
+TEST(MultTests,MultDiv){
+        Base* left = new Op(-5);
+        Base* right = new Op(2);
+        Div* test = new Div(left, right);
+        EXPECT_EQ(test->evaluate(), double(-5)/2);
+
+}
+
