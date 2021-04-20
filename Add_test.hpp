@@ -7,6 +7,7 @@
 #include "MockTests/SevenOpMock.hpp"
 #include "MockTests/Pi_Mock.hpp"
 #include "Add.hpp"
+#include "Sub.hpp"
 #include "op.hpp"
 #include <cmath>
 
@@ -34,6 +35,15 @@ TEST(AddTests, Neg) {
         EXPECT_EQ(a->evaluate(), NegativeOpMock().evaluate());
 }
 
+TEST(AddTests, NegString) {
+        Base* x = new Op(-10);
+        Base* y = new Op(0);
+        Add* a = new Add(x, y);
+
+        EXPECT_EQ(a->stringify(), "(" + NegativeOpMock().stringify() + "+0)");
+}
+
+
 TEST(AddTests, PosString) {
         Base* x = new Op(M_PI);
         Base* y = new Op(0);
@@ -42,14 +52,14 @@ TEST(AddTests, PosString) {
         EXPECT_EQ(a->stringify(), "(" + PiMock().stringify() + "+0)");
 }
 
-//TEST(AddTests, Sub) {
-//       Base* x = new Op(100);
-//       Base* y = new Op(10);
-//       Add* a = new Add(x, y);
-//
-//       Base* ten = new Op(10);
-//      Sub* s = new Sub(a, ten);
-//
-//       EXPECT_EQ(d->evaluate(), HundredMock().evaluate());
-//}
+TEST(AddTests, Sub) {
+       Base* x = new Op(100);
+       Base* y = new Op(10);
+       Add* a = new Add(x, y);
+
+       Base* ten = new Op(10);
+       Sub* s = new Sub(a, ten);
+
+       EXPECT_EQ(s->evaluate(), HundredMock().evaluate());
+}
 
