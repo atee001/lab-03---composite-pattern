@@ -1,6 +1,12 @@
 #include <iostream>
-
+#include "Add.hpp"
+#include "Sub.hpp"
+#include "Pow.hpp"
+#include "Mult.hpp"
+#include "Div.hpp"
+#include "Rand.hpp"
 #include "base.hpp"
+#include "op.hpp"
 
 int main() {
     // This is a very basic main, and being able to correctly execute this main
@@ -11,7 +17,7 @@ int main() {
     Base* four = new Op(4);
     Base* two = new Op(2);
     Base* mult = new Mult(seven, four);
-    Base* add = new Add(three, mult);
+    Base* add = new Add(three, mult );
     Base* minus = new Sub(add, two);
 
     std::cout << minus->stringify() << " = " << minus->evaluate() << std::endl;
